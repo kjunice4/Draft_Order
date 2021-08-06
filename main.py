@@ -60,17 +60,39 @@ Builder.load_string("""
             on_release:
                 app.root.current = "draft_order"
                 root.manager.transition.direction = "left" 
-                
+
         Button:
             font_size: 75
-            background_color: 0, 1 , 0 , 1
+            background_color: 0, 0 , 0 , 1
             size_hint_y: None
-            height: 200
+            height: 400
             text: "Visit KSquared,LLC"
             on_release:
                 import webbrowser
-                webbrowser.open('https://kivy.org/')
-
+                webbrowser.open('https://kevinjunice.wixsite.com/ksquaredllc')
+        Button:
+            font_size: 75
+            background_color: 0, 0 , 0 , 1
+            size_hint_y: None
+            height: 400
+            text: "Other apps from KSquared,LLC"
+            on_release:
+                import webbrowser
+                webbrowser.open('https://kevinjunice.wixsite.com/ksquaredllc/subscribe')   
+            
+            
+        Button:
+            font_size: 75
+            background_color: 0, 0 , 0 , 1
+            size_hint_y: None
+            height: 400
+            text: "Donate to KSquared,LLC"
+            on_release:
+                import webbrowser
+                webbrowser.open('https://kevinjunice.wixsite.com/ksquaredllc/about-ksquared')
+            
+                
+            
 """)
 
 #Draft Order
@@ -154,7 +176,7 @@ Builder.load_string("""
                 Button:
                     id: steps
                     text: "Randomize"   
-                    font_size: 75
+                    font_size: 60
                     size_hint_y: None
                     background_color: 0, 1 , 0 , 1
                     height: 100
@@ -169,9 +191,9 @@ Builder.load_string("""
                 text: one.text
                 hint_text: "1)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10
                 
             TextInput:
@@ -179,9 +201,9 @@ Builder.load_string("""
                 text: two.text
                 hint_text: "2)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10 
                 
             TextInput:
@@ -189,9 +211,9 @@ Builder.load_string("""
                 text: three.text
                 hint_text: "3)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10
                 
             TextInput:
@@ -199,19 +221,19 @@ Builder.load_string("""
                 text: four.text
                 hint_text: "4)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10 
                 
             TextInput:
                 id: five
                 text: five.text
-                hint_text: "4)"
+                hint_text: "5)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10
                 
             TextInput:
@@ -219,9 +241,9 @@ Builder.load_string("""
                 text: six.text
                 hint_text: "6)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10 
                 
             TextInput:
@@ -229,9 +251,9 @@ Builder.load_string("""
                 text: seven.text
                 hint_text: "7)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10
                 
             TextInput:
@@ -239,9 +261,9 @@ Builder.load_string("""
                 text: eight.text
                 hint_text: "8)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10 
                 
             TextInput:
@@ -249,9 +271,9 @@ Builder.load_string("""
                 text: nine.text
                 hint_text: "9)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10
                 
             TextInput:
@@ -259,9 +281,9 @@ Builder.load_string("""
                 text: ten.text
                 hint_text: "10)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10 
                 
             TextInput:
@@ -269,9 +291,9 @@ Builder.load_string("""
                 text: eleven.text
                 hint_text: "11)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10
                 
             TextInput:
@@ -279,9 +301,9 @@ Builder.load_string("""
                 text: twelve.text
                 hint_text: "12)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10 
                 
             TextInput:
@@ -289,9 +311,9 @@ Builder.load_string("""
                 text: thirteen.text
                 hint_text: "13)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10
                 
             TextInput:
@@ -299,9 +321,9 @@ Builder.load_string("""
                 text: fourteen.text
                 hint_text: "14)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10 
                 
             TextInput:
@@ -309,9 +331,9 @@ Builder.load_string("""
                 text: fifteen.text
                 hint_text: "15)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10
                 
             TextInput:
@@ -319,9 +341,9 @@ Builder.load_string("""
                 text: sixteen.text
                 hint_text: "16)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10                 
 
             TextInput:
@@ -329,9 +351,9 @@ Builder.load_string("""
                 text: seventeen.text
                 hint_text: "17)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10
                 
             TextInput:
@@ -339,9 +361,9 @@ Builder.load_string("""
                 text: eighteen.text
                 hint_text: "18)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10 
                 
             TextInput:
@@ -349,9 +371,9 @@ Builder.load_string("""
                 text: nineteen.text
                 hint_text: "19)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10
                 
             TextInput:
@@ -359,9 +381,9 @@ Builder.load_string("""
                 text: twenty.text
                 hint_text: "20)"
                 multiline: False
-                font_size: 35
+                font_size: 60
                 size_hint_y: None
-                height: 75
+                height: 100
                 padding: 10  
                 
               
