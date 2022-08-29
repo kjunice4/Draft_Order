@@ -5,7 +5,6 @@ from kivy.lang import Builder
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.core.window import Window
 import random
 
 #Opening Page
@@ -24,7 +23,7 @@ Builder.load_string("""
                 root.manager.transition.direction = "left" 
                 
         Button:
-            font_size: 50
+            font_size: '20sp'
             background_color: 0, 0 , 0 , 1
             size_hint_y: None
             height: 200
@@ -45,14 +44,14 @@ Builder.load_string("""
         cols: 1
         
         Label:
-            font_size: 75
+            font_size: '20sp'
             size_hint_y: None
             height: 200
             padding: 10, 10
             text: "Menu"
                 
         Button:
-            font_size: 75
+            font_size: '20sp'
             background_color: 0, 0 , 1, 1
             size_hint_y: None
             height: 200
@@ -62,7 +61,7 @@ Builder.load_string("""
                 root.manager.transition.direction = "left" 
 
         Button:
-            font_size: 75
+            font_size: '20sp'
             background_color: 0, 0 , 0 , 1
             size_hint_y: None
             height: 400
@@ -70,28 +69,6 @@ Builder.load_string("""
             on_release:
                 import webbrowser
                 webbrowser.open('https://kevinjunice.wixsite.com/ksquaredllc')
-        Button:
-            font_size: 75
-            background_color: 0, 0 , 0 , 1
-            size_hint_y: None
-            height: 400
-            text: "Other apps from KSquared,LLC"
-            on_release:
-                import webbrowser
-                webbrowser.open('https://kevinjunice.wixsite.com/ksquaredllc/subscribe')   
-            
-            
-        Button:
-            font_size: 75
-            background_color: 0, 0 , 0 , 1
-            size_hint_y: None
-            height: 400
-            text: "Donate to KSquared,LLC"
-            on_release:
-                import webbrowser
-                webbrowser.open('https://kevinjunice.wixsite.com/ksquaredllc/about-ksquared')
-            
-                
             
 """)
 
@@ -115,7 +92,7 @@ Builder.load_string("""
             height: self.minimum_height
             
             Label:
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
@@ -133,7 +110,7 @@ Builder.load_string("""
                 Button:
                     id: steps
                     text: "Menu"   
-                    font_size: 75
+                    font_size: '20sp'
                     size_hint_y: None
                     background_color: 0, 0 , 1 , 1
                     height: 100
@@ -145,7 +122,7 @@ Builder.load_string("""
                 Button:
                     id: steps
                     text: "Clear All"   
-                    font_size: 75
+                    font_size: '20sp'
                     size_hint_y: None
                     background_color: 1, 0 , 0 , 1
                     height: 100
@@ -176,7 +153,7 @@ Builder.load_string("""
                 Button:
                     id: steps
                     text: "Randomize"   
-                    font_size: 60
+                    font_size: '20sp'
                     size_hint_y: None
                     background_color: 0, 1 , 0 , 1
                     height: 100
@@ -191,7 +168,7 @@ Builder.load_string("""
                 text: one.text
                 hint_text: "1)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10
@@ -201,7 +178,7 @@ Builder.load_string("""
                 text: two.text
                 hint_text: "2)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10 
@@ -211,7 +188,7 @@ Builder.load_string("""
                 text: three.text
                 hint_text: "3)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10
@@ -221,7 +198,7 @@ Builder.load_string("""
                 text: four.text
                 hint_text: "4)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10 
@@ -231,7 +208,7 @@ Builder.load_string("""
                 text: five.text
                 hint_text: "5)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10
@@ -241,7 +218,7 @@ Builder.load_string("""
                 text: six.text
                 hint_text: "6)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10 
@@ -251,7 +228,7 @@ Builder.load_string("""
                 text: seven.text
                 hint_text: "7)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10
@@ -261,7 +238,7 @@ Builder.load_string("""
                 text: eight.text
                 hint_text: "8)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10 
@@ -271,7 +248,7 @@ Builder.load_string("""
                 text: nine.text
                 hint_text: "9)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10
@@ -281,7 +258,7 @@ Builder.load_string("""
                 text: ten.text
                 hint_text: "10)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10 
@@ -291,7 +268,7 @@ Builder.load_string("""
                 text: eleven.text
                 hint_text: "11)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10
@@ -301,7 +278,7 @@ Builder.load_string("""
                 text: twelve.text
                 hint_text: "12)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10 
@@ -311,7 +288,7 @@ Builder.load_string("""
                 text: thirteen.text
                 hint_text: "13)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10
@@ -321,7 +298,7 @@ Builder.load_string("""
                 text: fourteen.text
                 hint_text: "14)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10 
@@ -331,7 +308,7 @@ Builder.load_string("""
                 text: fifteen.text
                 hint_text: "15)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10
@@ -341,7 +318,7 @@ Builder.load_string("""
                 text: sixteen.text
                 hint_text: "16)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10                 
@@ -351,7 +328,7 @@ Builder.load_string("""
                 text: seventeen.text
                 hint_text: "17)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10
@@ -361,7 +338,7 @@ Builder.load_string("""
                 text: eighteen.text
                 hint_text: "18)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10 
@@ -371,7 +348,7 @@ Builder.load_string("""
                 text: nineteen.text
                 hint_text: "19)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10
@@ -381,11 +358,10 @@ Builder.load_string("""
                 text: twenty.text
                 hint_text: "20)"
                 multiline: False
-                font_size: 60
+                font_size: '20sp'
                 size_hint_y: None
                 height: 100
                 padding: 10  
-                
               
             GridLayout:
                 id: list_of_steps
@@ -400,24 +376,6 @@ class draft_order(Screen):
 
     def __init__(self, **kwargs):
         super(draft_order, self).__init__(**kwargs)
-        Window.bind(on_keyboard=self._key_handler)
-
-    def _key_handler(self, instance, key, *args):
-        if key == 27:
-            self.set_previous_screen()
-            return True
-
-    def set_previous_screen(self):
-        if sm.current == "Homepage":
-            pass
-        elif sm.current == "Menu":
-            pass
-        elif sm.current == "Algebra_App_List":
-            sm.transition.direction = 'right'
-            sm.current = "Menu"
-        elif sm.current == "Expressions":
-            sm.transition.direction = 'right'
-            sm.current = "Algebra_App_List"
             
     layouts = []
     def randomize(self,entry):
@@ -443,20 +401,17 @@ class draft_order(Screen):
             random.shuffle(new_list)
             print("random_list",new_list)
             
-            
             i = 0
             while i < len(new_list):
                 
-                self.ids.list_of_steps.add_widget(Label(text= str(i+1) + ")" + str(new_list[i])  ,font_size = 50, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= str(i+1) + ") " + str(new_list[i])  ,font_size = '20sp', size_hint_y= None, height=100))
                 self.layouts.append(layout)
                 
                 i = i + 1
             
         except Exception:
-            self.ids.list_of_steps.add_widget(Label(text= "Invalid Input" ,font_size = 50, size_hint_y= None, height=100))
+            self.ids.list_of_steps.add_widget(Label(text= "Invalid Input" ,font_size = '20sp', size_hint_y= None, height=100))
             self.layouts.append(layout)
-        
-        
         
 class Homepage(Screen):
     pass            
@@ -464,13 +419,11 @@ class Homepage(Screen):
 class Menu(Screen):
     pass            
 
-
 sm = ScreenManager()
 sm.add_widget(Homepage(name="Homepage"))
 sm.add_widget(Menu(name="Menu"))
 sm.add_widget(draft_order(name="draft_order"))
 sm.current = "Homepage"   
-
 
 class draft_order(App):
     def build(app):
