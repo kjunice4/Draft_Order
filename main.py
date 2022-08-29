@@ -5,6 +5,7 @@ from kivy.lang import Builder
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.core.window import Window
 import random
 
 #Opening Page
@@ -27,10 +28,30 @@ Builder.load_string("""
             background_color: 0, 0 , 0 , 1
             size_hint_y: None
             height: 200
-            text: "KSquared Draft Order Randomizer"
+            text: "Tap anywhere to continue"
             on_release:
                 app.root.current = "Menu"
                 root.manager.transition.direction = "left" 
+                
+        Button:               
+            font_size: '20sp'
+            background_color: 0, 0 , 0 , 1
+            size_hint_y: None
+            height: 100
+            text: "Draft Order Randomizer"
+            on_release:
+                app.root.current = "Menu"
+                root.manager.transition.direction = "left" 
+                
+        Button:               
+            font_size: '20sp'
+            background_color: 0, 0 , 0 , 1
+            size_hint_y: None
+            height: 100
+            text: "A KSquared-Mathematics product"
+            on_release:
+                app.root.current = "Menu"
+                root.manager.transition.direction = "left"
 
 """)
 
@@ -49,7 +70,7 @@ Builder.load_string("""
             height: 200
             padding: 10, 10
             text: "Menu"
-                
+            
         Button:
             font_size: '20sp'
             background_color: 0, 0 , 1, 1
@@ -58,17 +79,31 @@ Builder.load_string("""
             text: "Draft Order Randomizer"
             on_release:
                 app.root.current = "draft_order"
-                root.manager.transition.direction = "left" 
-
+                root.manager.transition.direction = "left"
+                
         Button:
             font_size: '20sp'
-            background_color: 0, 0 , 0 , 1
             size_hint_y: None
-            height: 400
-            text: "Visit KSquared,LLC"
+            height: 200
+            padding: 10, 10
+            text: "Visit KSquared-Mathematics"
             on_release:
                 import webbrowser
-                webbrowser.open('https://kevinjunice.wixsite.com/ksquaredllc')
+                webbrowser.open('https://www.ksquaredmathematics.com/subscribe')
+                
+        Label:
+            font_size: '20sp'
+            size_hint_y: None
+            height: 200
+            padding: 10, 10
+            text: "Share KSquared-Mathematics"
+                 
+        Image:
+            source: 'KSquared_QR.png'
+            size_hint_y: None
+            height: 800
+            width: 800
+
             
 """)
 
@@ -426,6 +461,16 @@ sm.add_widget(draft_order(name="draft_order"))
 sm.current = "Homepage"   
 
 class draft_order(App):
+    def __init__(self, **kwargs):
+        super(draft_order, self).__init__(**kwargs)
+        Window.bind(on_keyboard=self._key_handler)
+    
+    def _key_handler(self, instance, key, *args):
+        print("key:",key)
+        if key == 27:
+            sm.current = sm.current
+            return True
+    
     def build(app):
         return sm
 
